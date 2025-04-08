@@ -1,23 +1,24 @@
 # "Job Application Portal"
-### Objective: Build a Job Application Portal that simulates an interactive, multi-step job application process. The app will use custom hooks for form handling, Redux for managing applications, dynamic routing for viewing job details, Context API for user information, and form validation.
 
-# App Requirements:
+It is a Job Application Portal that simulates an interactive, multi-step job application process. It uses custom hooks for form handling, Redux for managing applications, dynamic routing for viewing job details, Context API for user information, and form validation.
+
+# App Details:
     Home Page:
         Display a list of available job positions with titles, company names, and brief descriptions.
-        Each job should have a "View Details" button that navigates to a job detail page.
+        Each job have a "View Details" button that navigates to a job detail page.
     
     Job Details Page:
         Display detailed information about the job, including title, company, full description, requirements, and salary.
         Show an "Apply Now" button that navigates to a multi-step application form.
     
     Application Form:
-        The application process should be divided into three steps:
+        The application process is divided into three steps:
         Step 1: Personal Information – Name, email, phone number.
         Step 2: Experience – Years of experience, skills (allow users to add multiple skills dynamically).
         Step 3: Additional Information – Cover letter, preferred start date.
-        Each step should have a "Next" button (except the final step, which should have "Submit").
+        Each step has a "Next" button (except the final step, which has "Submit").
         Include form validation to check for required fields and validate inputs.
-        On submission, add the application to the global application state.
+        On submission, the application is added to the global application state.
 
     Application Summary Page:
         Display a summary of the submitted application information.
@@ -25,14 +26,14 @@
 
     Application List Page:
         Display all submitted applications with job title, applicant name, and a short summary.
-        Each application should have a "View Details" button to navigate to a detailed view of the application.
+        Each application has a "View Details" button to navigate to a detailed view of the application.
 
     User Profile and Settings:
-        Create a UserContext to store and provide user profile data (username, email).
+        Created a UserContext to store and provide user profile data (username, email).
         Allow users to update their profile on a Profile Page.
         Display the logged-in user’s name and email in the header.
 
-# Technical Requirements
+# Technical Details:
     Routing (React Router):
         /: Home page listing all job positions.
         /job/:id: Job Details page for the selected job.
@@ -42,21 +43,21 @@
         /profile: Profile page to update user information.
 
     State Management (Redux):
-        Use Redux to manage the state of all submitted applications.
-        The application state should store:
-            jobId, applicantName, experience, skills, coverLetter, and startDate.
-        Define actions to add, edit, and delete applications.
+        Uses Redux to manage the state of all submitted applications.
+        The application state stores:
+            jobId, applicant name, experience, skills, cover letter, and start date.
+        Defined actions to add, edit, and delete applications.
     
     Custom Hooks:
-        Create custom hooks for form handling and validation (useForm).
-        Use useForm to handle input values, validation, and submission in each step of the application form.
+        Created custom hooks for form handling and validation (useForm).
+        Used useForm to handle input values, validation, and submission in each step of the application form.
 
     Global User Context (Context API):
         Set up a UserContext to store and manage user profile data (name, email).
-        Use UserContext to display the user’s profile data in the header and allow edits on the Profile page.
+        Used UserContext to display the user’s profile data in the header and allow edits on the Profile page.
 
     Form Validation:
-        Validate required fields (e.g., name, email) and specific formats (e.g., email, phone number).
+        Validates required fields (e.g., name, email) and specific formats (e.g., email, phone number).
         Display validation errors on invalid input.
 
     Conditional Rendering:
